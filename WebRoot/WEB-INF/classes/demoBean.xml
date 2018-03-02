@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+				
+	<!-- <bean id="Demo_UserAction" class="cn.itcast.demo.action.Demo_UserAction">
+		<property name="demo_UserService" ref="demo_UserService" />	
+	</bean>
+
+	<bean id="Demo_UserService" class="cn.itcast.demo.serviceImpl.Demo_UserServiceImpl" >
+		<property name="demo_UserDao" ref="demo_UserDao" />
+	</bean> -->
+	
+   	<!-- <bean id="Demo_UserDao" class="cn.itcast.demo.daoImpl.Demo_UserDaoImpl" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean> -->
+			
+</beans>

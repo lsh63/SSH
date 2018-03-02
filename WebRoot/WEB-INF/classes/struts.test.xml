@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 配置为开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 把扩展名配置为action -->
+    <constant name="struts.action.extension" value="action" />
+    <!-- 把主题配置为simple -->
+    <constant name="struts.ui.theme" value="simple" />
+	
+    <package name="test" namespace="/" extends="struts-default">
+    
+    <!-- 页面跳转action -->
+    <action name="test_0">
+    	<result>/WEB-INF/jsp/testAction/test_01.jsp</result>
+    </action>
+    
+    <!-- 测试testAction_01 -->
+    	<action name="testAction_01" class="test_01" method="method_01">
+    		<result name="success">/WEB-INF/jsp/testAction/success.jsp</result>
+    		<result name="error">/WEB-INF/jsp/testAction/error.jsp</result>
+    	</action>
+    	
+    <!-- demo_UserAction -->
+    	<action name="demo_User_*" class="cn.itcast.demo.action.Demo_UserAction" method="{1}">
+    		<result name="list">/WEB-INF/jsp/demoAction/demo_userlist.jsp</result>
+    		<!-- type="redirectAction"表示action后缀名不用加“.action” -->
+    		<result name="add" type="redirectAction">demo_User_list</result>
+    		<result name="delete" type="redirectAction">demo_User_list</result>
+    	</action>
+    	
+    <!-- CustomerAction -->
+    	<action name="Customer_*" class="cn.itcast.customer.action.CustomerAction" method="{1}">
+    		<result name="listCustomer">/WEB-INF/jsp/demoAction/customer.jsp</result>
+    		<result name="addCustomer" type="redirectAction">Customer_listCustomer</result>
+    		<result name="deleteCustomerById" type="redirectAction">Customer_listCustomer</result>
+    		<result name="deleteCustomer" type="redirectAction">Customer_listCustomer</result>
+    	</action>
+    
+    </package>
+</struts>

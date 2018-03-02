@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<!-- 1，数据库连接信息（方言） -->
+	<property name="dialect">
+		<!-- org.hibernate.dialect.Oracle10gDialect -->
+		org.hibernate.dialect.MySQL5Dialect
+	</property>
+
+	<!-- 2，其他配置 -->
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+
+	<!-- 3，导入映射文件 	-->
+	<mapping resource="cn/itcast/oa/domain/Department.hbm.xml" />
+	<mapping resource="cn/itcast/oa/domain/Forum.hbm.xml" />
+	<mapping resource="cn/itcast/oa/domain/Privilege.hbm.xml" />
+	<mapping resource="cn/itcast/oa/domain/Reply.hbm.xml" />
+	<mapping resource="cn/itcast/oa/domain/Role.hbm.xml" />
+	<mapping resource="cn/itcast/oa/domain/Topic.hbm.xml" />
+	<mapping resource="cn/itcast/oa/domain/User.hbm.xml" />
+	
+	<mapping resource="cn/itcast/demo/model/Demo_User.hbm.xml" />
+	<mapping resource="cn/itcast/demo/model/Demo_Filter.hbm.xml" />
+	
+	<mapping resource="cn/itcast/demoHibernate/entity/DhUser.hbm.xml"></mapping>
+	
+	<mapping resource="cn/itcast/customer/entity/Customer.hbm.xml"></mapping>
+	
+	<mapping resource="cn/itcast/ssh/entity/SshUser.hbm.xml"></mapping>
+
+</session-factory>
+
+</hibernate-configuration>
